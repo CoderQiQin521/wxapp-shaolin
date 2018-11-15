@@ -1,1 +1,30 @@
 /* components/common-title/common-title.wxss */
+.box {
+  position: relative;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 2rpx 2rpx #f7f7f7;
+  font-size: 28rpx;
+}
+
+.box:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10rpx;
+  height: 80rpx;
+  transform: skewY(-20deg);
+  background-color: #9f0a04;
+}
+
+.more {
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  font-size: 24rpx;
+  color: #999;
+}
+

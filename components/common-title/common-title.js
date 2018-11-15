@@ -4,7 +4,21 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    title: {
+      type: String,
+      value: "我是标题"
+    },
+    more: {
+      type: String,
+      value: "查看更多+"
+    },
+    urls: {
+      type: String
+    },
+    openType: {
+      type: String,
+      value: "switchTab"
+    }
   },
 
   /**

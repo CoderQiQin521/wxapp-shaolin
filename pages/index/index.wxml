@@ -9,4 +9,15 @@
   </block>
 </swiper>
 
-<common-title></common-title>
+<view class='about_box'>
+  <common-title title="学校简介" urls="{{'/pages/about/about'}}" more=""></common-title>
+  <view class='about_content'>
+    <view class='about_pic'>
+      <image src='{{about.pic}}' mode='aspectFill'></image>
+    </view>
+    <view class='about_intro'>
+      {{about.intro}}
+    </view>
+  </view>
+</view>
+

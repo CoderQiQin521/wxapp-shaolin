@@ -1,4 +1,23 @@
 /**index.wxss**/
 swiper {
-  height: 480rpx;
+  height: 300rpx;
+}
+
+.about_content {
+  padding: 30rpx;
+}
+
+.about_pic {
+  overflow: hidden;
+  height: 300rpx;
+  text-align: center;
+}
+
+.about_intro {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size: 28rpx;
+  line-height: 48rpx;
 }
