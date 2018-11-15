@@ -15,7 +15,7 @@ const formatNumber = n => {
 }
 
 /**
- * 验证手机号前两位和长度
+ * 验证手机号前两位和长度.
  * @param {Number} phone
  * @returns {boolean}
  */
