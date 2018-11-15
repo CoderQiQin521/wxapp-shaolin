@@ -1,0 +1,4 @@
+<!--components/phone-number/phone-number.wxml-->
+<view class='phone' bindtap='phoneNum'>
+  {{numbers}}
+</view>

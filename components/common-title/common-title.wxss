@@ -7,6 +7,7 @@
   overflow: hidden;
   box-shadow: 0 2rpx 2rpx #f7f7f7;
   font-size: 28rpx;
+  margin-bottom: 10rpx;
 }
 
 .box:after {

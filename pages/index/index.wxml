@@ -10,7 +10,7 @@
 </swiper>
 
 <view class='about_box'>
-  <common-title title="学校简介" urls="{{'/pages/about/about'}}" more=""></common-title>
+  <common-title title="学校简介" urls="{{'/pages/about/about'}}"></common-title>
   <view class='about_content'>
     <view class='about_pic'>
       <image src='{{about.pic}}' mode='aspectFill'></image>
@@ -19,5 +19,18 @@
       {{about.intro}}
     </view>
   </view>
+  <view class='notice_box'>
+    <view class='notice_unit about_intro'>
+      {{notice.content}}
+    </view>
+  </view>
+  <view class='phone_box align_center'>
+    <phone-number numbers="13676910123"></phone-number>
+  </view>
+</view>
+
+<view class='school_box'>
+  <common-title title="新闻中心" urls="{{'/pages/news/news'}}"></common-title>
+  
 </view>
 
