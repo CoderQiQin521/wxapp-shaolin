@@ -1,12 +1,43 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/about/about",
+    "pages/course/course",
+    "pages/news/news"
   ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon-index.png",
+        "selectedIconPath": "image/icon-index-active.png",
+        "text": "学校首页"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "iconPath": "image/icon-course.png",
+        "selectedIconPath": "image/icon-course-active.png",
+        "text": "课程安排"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "image/icon-news.png",
+        "selectedIconPath": "image/icon-news-active.png",
+        "text": "新闻中心"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "image/icon-about.png",
+        "selectedIconPath": "image/icon-about-active.png",
+        "text": "关于我们"
+      }
+    ],
+    "selectedColor": "#9f0a04"
+  },
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#9f0a04",
+    "navigationBarTitleText": "嵩山少林寺武术学校",
+    "navigationBarTextStyle":"#fff"
   }
 }

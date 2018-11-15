@@ -1,10 +1,107 @@
-/**app.wxss**/
-.container {
-  height: 100%;
+/* 全局样式 */
+image {
+  width: 100%;
+}
+
+.float_lt {
+  float: left;
+}
+
+.float_rt {
+  float: right;
+}
+
+.clearfix:after {
+  content: '';
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.text_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex_around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex_between {
+  display: flex;
   justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+}
+
+.flex_align {
+  display: flex;
+  align-items: center;
+}
+
+.common_bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: all 0.6s;
+}
+
+.common_bg.show {
+  opacity: 1;
+  display: block;
+}
+
+.bg_white {
+  background-color: #fff;
+}
+
+.bgstyle {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p30 {
+  padding: 0 30rpx;
+}
+
+.nine_col {
+  color: #999;
+}
+
+.ablock {
+  display: block;
+  height: 100%;
+}
+
+.shadow {
+  box-shadow: 0 2rpx 0 #f3f3f3;
+}
+
+.border_btm {
+  border-bottom: 20rpx solid #f7f7f7;
+}

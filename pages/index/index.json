@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "common-title": "/components/common-title/common-title"
+  }
+}
