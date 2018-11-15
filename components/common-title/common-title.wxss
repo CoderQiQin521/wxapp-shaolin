@@ -1,1 +1,14 @@
 /* components/common-title/common-title.wxss */
+.box {
+  position: relative;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+}
+
+.more {
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  font-size: 28rpx;
+  color: #999;
+}

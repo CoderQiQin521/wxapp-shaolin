@@ -1,7 +1,7 @@
 <!--components/common-title/common-title.wxml-->
 <view class='box'>
   <view class='title'>我是标题</view>
-  <navigator url='/pages/about/about.wxml'>
+  <navigator url='/pages/about/about.wxml' class='more'>
     查看更多+
   </navigator>
 </view>
