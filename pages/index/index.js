@@ -1,4 +1,6 @@
 const app = getApp()
+var http = require('../../http/request')
+var api = require('../../config/api')
 
 Page({
   data: {
@@ -39,7 +41,14 @@ Page({
       duration: e.detail.value
     })
   },
+  getData() {
+    http.request('https://api.apiopen.top/musicRankings').then(res => {
+      console.log(res)
+    }).catch(err => {
+
+    })
+  },
   onLoad: function () {
-    
+    this.getData()
   }
 })

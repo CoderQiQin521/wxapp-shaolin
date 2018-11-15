@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
-	"appid": "wx4dc729fa566beaec",
+	"appid": "wx0cfd1e0a666254a4",
 	"projectname": "shaolin",
 	"debugOptions": {
 		"hidedInDevtools": []
