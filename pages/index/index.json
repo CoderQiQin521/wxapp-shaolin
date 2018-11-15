@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "common-title": "/components/common-title/common-title",
-    "phone-number": "/components/phone-number/phone-number"
+    "phone-number": "/components/phone-number/phone-number",
+    "common-card": "/components/common-card/common-card"
   }
 }

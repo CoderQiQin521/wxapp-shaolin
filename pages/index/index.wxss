@@ -42,3 +42,6 @@ swiper {
   padding: 40rpx 0;
 }
 
+.cards:nth-child(even) {
+  background-color: rgb(247, 247, 245);
+}
