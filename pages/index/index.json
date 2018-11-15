@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "common-title": "/components/common-title/common-title"
+    "common-title": "/components/common-title/common-title",
+    "common-card": "/components/common-card/common-card"
   }
 }

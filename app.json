@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/about/about",
     "pages/course/course",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/product/product"
   ],
   "tabBar": {
     "list": [

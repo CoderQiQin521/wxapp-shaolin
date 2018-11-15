@@ -21,3 +21,7 @@ swiper {
   font-size: 28rpx;
   line-height: 48rpx;
 }
+
+.cards:nth-child(even) {
+  background-color: rgb(247, 247, 245);
+}

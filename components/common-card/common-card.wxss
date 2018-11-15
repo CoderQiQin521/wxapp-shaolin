@@ -1,0 +1,29 @@
+/* components/common-card/common-card.wxss */
+.card {
+  padding: 30rpx;
+  background-color: transparent;
+}
+
+.title {
+  display: inline-block;
+  width: 202rpx;
+  height: 74rpx;
+  margin-bottom: 10rpx;
+  line-height: 74rpx;
+  font-weight: bold;
+  color: #9f0a04;
+  text-indent: 30rpx;
+  /*text-align: center;*/
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAAlCAYAAACwE5ygAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzkxOEZGRjc5MEExMTFFODg1NEREMkMwREE0Qzc4RkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzkxOEZGRjg5MEExMTFFODg1NEREMkMwREE0Qzc4RkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDOTE4RkZGNTkwQTExMUU4ODU0REQyQzBEQTRDNzhGQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDOTE4RkZGNjkwQTExMUU4ODU0REQyQzBEQTRDNzhGQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrlEZuwAAAGXSURBVHja7Nu/SwJhHMfxzz0d5lCTZmJYutWSe22tBRVFPwj7hZXQUFMQQffY0j9i0FL0R9QQLl3tLUVZ2pKFUnJP19AQJCh0+gyf9+Agujwvvt87DzSyokM5CsyDEkPDiJ+fyDMRztT6TNIp/fm+qQyBhXIBwufjSf5jladn2AeHuBldlXPOA45FJNPI9wUUx8WL/N0hJPZ30RaL4GpsXSZL91ZDMAbP0HMcpy8Me2ZTJt/zVv0Tw5qCU4l1wZ5K141DmGbixIOwpzfqWmuEacHk5GbT3zcEFmE0vObkRlNywqm91gjTwru125EVWUHVIoxua22gx/2dsyShPi3C6LbWYiFcjC9KPP5ea4TRAMeMutec1JZE9c0ijHaTE8Hl5JpEoWgRRjMc9IZxvbwtXz9eLCMrOtV8uciHmBr08+CzfJeHyePQa3IG93ZwGu3nKtOt9mDAfVWE0TXCEIYRhjCMMIRhhGGEIQwjDGEYYRhhCMMIQxjmNYzBP2LolnJJBP+3pKMMYBpwcOQP8DB0WmPuxHwJMACunoEaM16DEgAAAABJRU5ErkJggg==");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.content {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

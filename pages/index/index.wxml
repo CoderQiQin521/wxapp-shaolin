@@ -21,3 +21,8 @@
   </view>
 </view>
 
+<view class="cards" wx:for="{{3}}">
+  <common-card title="文化课程"></common-card>
+</view>
+
+

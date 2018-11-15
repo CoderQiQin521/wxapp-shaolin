@@ -1,0 +1,7 @@
+<!--components/common-card/common-card.wxml-->
+<navigator class="card" url="/pages/product/product">
+  <view class="title">{{title}}</view>
+  <view class="content">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam atque aut beatae consequuntur cum dolorem, enim eveniet facere fugiat ipsa laborum, nemo, nihil nisi perspiciatis quam qui quod ratione.
+  </view>
+</navigator>
