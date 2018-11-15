@@ -6,8 +6,8 @@
 
 .title {
   display: inline-block;
-  width: 202rpx;
-  height: 74rpx;
+  width: 200rpx;
+  height: 70rpx;
   margin-bottom: 10rpx;
   line-height: 74rpx;
   font-weight: bold;

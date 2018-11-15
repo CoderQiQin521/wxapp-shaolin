@@ -14,6 +14,17 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+/**
+ * 验证手机号前两位和长度
+ * @param {Number} phone
+ * @returns {boolean}
+ */
+const verifyPhone = phone => {
+  let reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/
+  return reg.test(phone)
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  verifyPhone: verifyPhone
 }
