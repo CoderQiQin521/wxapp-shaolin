@@ -1,6 +1,14 @@
 /* components/phone-number/phone-number.wxss */
-.phone {
+.contact {
+  text-align: center;
+}
+
+
+
+.phone,
+.more {
   display: inline-block;
+  margin: 0 20rpx;
   width: 300rpx;
   height: 70rpx;
   line-height: 70rpx;

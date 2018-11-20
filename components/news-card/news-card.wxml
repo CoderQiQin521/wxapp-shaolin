@@ -1,0 +1,17 @@
+<!--components/news-card/news-card.wxml-->
+<view class='news'>
+  <view class='txt'>
+    <view class='titles text_ellipsis'>
+      {{newsData.titles}}
+    </view>
+    <view class='intro text_ellipsis'>
+      {{newsData.intros}}
+    </view>
+    <navigator class='btn' url='{{newsData.urls}}' open-type='switchTab'>
+      {{newsData.more}}
+    </navigator>
+  </view>
+  <view class='thumb'>
+    <image src='{{newsData.srcs}}' mode='widthFix'></image>
+  </view>
+</view>

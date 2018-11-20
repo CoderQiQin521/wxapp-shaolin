@@ -1,0 +1,22 @@
+.about_content {
+  padding: 30rpx 30rpx 0;
+}
+
+.about_pic {
+  overflow: hidden;
+  margin-bottom: 30rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.about_title {
+  font-weight: bold;
+  text-align: center;
+  margin: 30rpx 0;
+}
+
+.about_intro {
+  text-align: justify;
+  font-size: 28rpx;
+  line-height: 48rpx;
+}

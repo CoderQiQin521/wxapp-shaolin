@@ -1,4 +1,7 @@
 <!--components/phone-number/phone-number.wxml-->
-<view class='phone' bindtap='phoneNum'>
-  {{numbers}}
+<view class='contact'>
+  <navigator url='{{urls}}' class='more' open-type='{{openType}}' wx:if='{{more}}'>{{more}}</navigator>
+  <view class='phone' bindtap='phoneNum'>
+    {{numbers}}
+  </view>
 </view>

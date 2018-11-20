@@ -1,2 +1,28 @@
-<!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<view class="menu_box">
+  <text class='menu1 {{menuTapCurrent=="0"?"borders":""}}' data-current="0" catchtap="menuTap">教学环境</text>
+  <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap">家长问答</text>
+  <text class='menu3 {{menuTapCurrent=="2"?"borders":""}}' data-current="2" catchtap="menuTap">新闻中心</text>
+</view>
+<view class="tab1" hidden="{{menuTapCurrent!='0'}}">
+  <view class='around_unit'>
+    <view class='around_cell' wx:for="{{caseData}}" wx:key="{{item.index}}">
+      <case-card caseData="{{item}}"></case-card>
+    </view>
+  </view>
+</view>
+<view class="tab2" hidden="{{menuTapCurrent!='1'}}">
+  <view class='around_unit'>
+    <view class='around_cell' wx:for="{{caseData}}" wx:key="{{item.index}}">
+      <case-card caseData="{{item}}"></case-card>
+    </view>
+  </view>
+</view>
+<view class="tab3" hidden="{{menuTapCurrent!='2'}}">
+  <view class='news_unit'>
+    <view class='news_cell' wx:for="{{newsData}}" wx:key="{{item.index}}">
+      <news-card newsData="{{item}}"></news-card>
+    </view>
+  </view>
+</view>
+
+<slide-icon></slide-icon>

@@ -1,0 +1,11 @@
+<view class='about_content'>
+  <view class='about_title'>
+    {{about.title}}
+  </view>
+  <view class='about_pic'>
+    <image src='{{about.pic}}' mode='widthFix'></image>
+  </view>
+  <view class='about_intro'>
+    {{about.intro}}
+  </view>
+</view>

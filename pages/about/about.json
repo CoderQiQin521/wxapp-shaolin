@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "slide-icon": "/components/slide-icon/slide-icon"
+  }
+}

@@ -1,0 +1,8 @@
+/* components/slide-icon/slide-icon.wxss */
+.slide {
+  position: fixed;
+  right: 10rpx;
+  bottom: 20%;
+  width: 60rpx;
+  height: 100rpx;
+}

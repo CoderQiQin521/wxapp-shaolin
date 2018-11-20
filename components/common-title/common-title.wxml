@@ -1,7 +1,4 @@
 <!--components/common-title/common-title.wxml-->
 <view class='box'>
   <view class='title'>{{title}}</view>
-  <navigator wx:if='{{more}}' url='{{urls}}' open-type='{{openType}}' class='more'>
-    {{more}}
-  </navigator>
 </view>

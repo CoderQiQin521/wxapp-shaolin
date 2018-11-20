@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/detail/detail",
     "pages/about/about",
     "pages/course/course",
-    "pages/news/news",
-    "pages/product/product"
+    "pages/news/news"
   ],
   "tabBar": {
     "list": [
@@ -38,7 +38,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#9f0a04",
-    "navigationBarTitleText": "嵩山少林寺武术学校",
+    "navigationBarTitleText": "登封市德武功夫文化传播有限公司",
     "navigationBarTextStyle":"#fff"
   }
 }

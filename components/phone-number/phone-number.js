@@ -6,6 +6,17 @@ Component({
   properties: {
     numbers: {
       type: String
+    },
+    more: {
+      type: String,
+      value: "查看详情"
+    },
+    urls: {
+      type: String
+    },
+    openType: {
+      type: String,
+      value: "switchTab"
     }
   },
 

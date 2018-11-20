@@ -1,29 +1,39 @@
 /**index.wxss**/
-swiper {
-  height: 300rpx;
+image {
+  width: 100%;
 }
 
-.about_box {
+swiper {
+  height: 320rpx;
+}
+
+.bd_btm {
   border-bottom: 30rpx solid #f6f6f6;
 }
 
 .about_content {
-  padding: 20rpx 30rpx;
+  padding: 30rpx 30rpx 0;
 }
 
 .about_pic {
   overflow: hidden;
   height: 300rpx;
+  margin-bottom: 30rpx;
   text-align: center;
 }
 
 .about_intro {
+  /* text-align: justify; */
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   font-size: 28rpx;
   line-height: 48rpx;
+}
+
+.about_zhang {
+  padding: 30rpx 30rpx 0;
 }
 
 .notice_box {
@@ -42,6 +52,62 @@ swiper {
   padding: 40rpx 0;
 }
 
-.cards:nth-child(even) {
-  background-color: rgb(247, 247, 245);
+.cards {
+  padding: 0 30rpx;
+}
+
+.around_unit {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.around_cell {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.news_unit {
+  padding: 0 20rpx;
+}
+
+.sign_form {
+  margin: 20rpx 0;
+}
+
+.sign_ipt,
+.sign_btn {
+  width: 94%;
+  margin: 3% auto;
+  padding-left: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  background-color: #eee;
+}
+
+.sign_btn {
+  padding: 0;
+  background-color: #9f0a04;
+  color: #fff;
+}
+
+.foot_box {
+  padding: 30rpx 0;
+  line-height: 48rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #b28850;
+  border-bottom: 6rpx solid #9f0a04;
+}
+
+.foot_ewm {
+  margin: 20rpx auto;
+  width: 200rpx;
+  height: 200rpx;
+  overflow: hidden;
 }

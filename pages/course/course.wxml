@@ -1,2 +1,20 @@
-<!--pages/course/course.wxml-->
-<text>pages/course/course.wxml</text>
+<view class="menu_box">
+  <text class='menu1 {{menuTapCurrent=="0"?"borders":""}}' data-current="0" catchtap="menuTap">收费标准</text>
+  <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap">开设课程</text>
+</view>
+<view class="tab1" hidden="{{menuTapCurrent!='0'}}">
+  <view class='around_unit'>
+    <view class='around_cell' wx:for="{{caseData}}" wx:key="{{item.index}}">
+      <case-card caseData="{{item}}"></case-card>
+    </view>
+  </view>
+</view>
+<view class="tab2" hidden="{{menuTapCurrent!='1'}}">
+  <view class='card_box'>
+    <view class="cards" wx:for="{{courseData}}" wx:key="{{item.index}}">
+      <common-card cardData="{{item}}"></common-card>
+    </view>
+  </view>
+</view>
+
+<slide-icon></slide-icon>

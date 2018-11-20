@@ -1,12 +1,15 @@
-// components/common-title/common-title.js
+// components/case-card/case-card.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    title: {
-      type: String,
-      value: "我是标题"
+    caseData: {
+      type: Object
+    },
+    hasLow: {
+      type: Boolean,
+      value: true
     }
   },
 

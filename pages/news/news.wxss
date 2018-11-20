@@ -1,1 +1,9 @@
 /* pages/news/news.wxss */
+.news_unit,
+.around_unit {
+  padding: 0 30rpx;
+}
+
+.around_cell {
+  margin: 20rpx 0;
+}

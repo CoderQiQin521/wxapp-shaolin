@@ -1,0 +1,7 @@
+<!--components/case-card/case-card.wxml-->
+<navigator class='connect {{hasLow ? "" : "low"}}' url='/pages/detail/detail'>
+  <view class='thumbs'>
+    <image src='{{caseData.thumbs}}' mode='widthFix'></image>
+  </view>
+  <view class='titles'>{{caseData.title}}</view>
+</navigator>

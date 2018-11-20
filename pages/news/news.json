@@ -1,1 +1,7 @@
-{}
+{
+  "usingComponents": {
+    "news-card": "/components/news-card/news-card",
+    "case-card": "/components/case-card/case-card",
+    "slide-icon": "/components/slide-icon/slide-icon"
+  }
+}
