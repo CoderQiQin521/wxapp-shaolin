@@ -30,12 +30,9 @@ Page({
     this.setData({
       menuTapCurrent: current
     });
-
-    //判断哪种页面调对应的接口
     this.getNews(current)
-    
   },
-
+  //获取新闻分类接口数据
   getData: function () {
     http.request(api.ApiNewsType).then(res => {
       this.setData({
@@ -43,6 +40,7 @@ Page({
       })
     })
   },
+  //获取新闻列表接口数据
   getNews: function (id) {
     http.request(api.ApiNews + '?id=' + id).then(res => {
       this.setData({

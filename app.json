@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/about/about",
     "pages/news/news",
     "pages/course/course",         
-    "pages/rules/rules",
-    "pages/about/about",    
+    "pages/rules/rules",       
     "pages/detail/detail"
   ],
   "tabBar": {
@@ -39,7 +39,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#9f0a04",
-    "navigationBarTitleText": "登封市德武功夫文化传播有限公司",
+    "navigationBarTitleText": "德武功夫文化",
     "navigationBarTextStyle":"#fff"
   }
 }

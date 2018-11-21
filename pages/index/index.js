@@ -73,7 +73,7 @@ Page({
         break
       }
     }
-    //若全部都有值得话判断手机号格式
+    //若全部都有值的话判断手机号格式
     if (isOk) {
       if (util.verifyPhone(parseInt(formData.phone))) {
         http.request(api.ApiSigUp).then(res => {

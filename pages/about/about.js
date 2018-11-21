@@ -11,36 +11,23 @@ Page({
     menuTapCurrent: 0,
     aboutData: {},
     callData: {},
-    markers: [{
-      iconPath: "/image/location.png",
-      id: 0,
-      latitude: 34.520218,
-      longitude: 112.961645,
-      width: 30,
-      height: 30
-    }],
-    polyline: [{
-      points: [{
-        longitude: 112.961645,
-        latitude: 34.520218
-      }, {
-        longitude: 112.961645,
-        latitude: 34.520218
-      }],
-      color: "#FF0000DD",
-      width: 2,
-      dottedLine: true
-    }]
+    markers: []
   },
-
   regionchange(e) {
-    console.log(e.type)
+    // console.log(e.type)
   },
-  markertap(e) {
-    console.log(e.markerId)
-  },
-  controltap(e) {
-    console.log(e.controlId)
+  toMap: function(){
+    wx.getLocation({
+      success: function(res) {
+        const latitude = res.latitude
+        const longitude = res.longitude
+        wx.openLocation({
+          latitude,
+          longitude,
+          scale: 14
+        })
+      },
+    })
   },
 
   /**
@@ -75,7 +62,15 @@ Page({
     })
     http.request(api.ApiCall).then(res => {
       this.setData({
-        callData: res.msg
+        callData: res.msg,
+        markers: [{
+          iconPath: "/image/location.png",
+          id: 0,
+          latitude: res.msg.lats,
+          longitude: res.msg.longs,
+          width: 30,
+          height: 30
+        }]
       })
     })
   },

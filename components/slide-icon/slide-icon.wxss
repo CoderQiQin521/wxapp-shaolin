@@ -3,6 +3,9 @@
   position: fixed;
   right: 10rpx;
   bottom: 20%;
-  width: 60rpx;
-  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80rpx;
+  height: 200rpx;
 }
