@@ -5,19 +5,6 @@ var util = require('../../utils/util')
 
 Page({
   data: {
-    formInfo: {
-      username: '',
-      phone: ''
-    },
-    about: {},
-    course: [],
-    footer: {},
-    lb: [],
-    news: [],
-    notice: {},
-    phone: {},
-    rules: {},
-    school: {},
     indicatorDots: true,
     autoplay: true,
     interval: 5000,

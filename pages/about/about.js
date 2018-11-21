@@ -8,10 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    menuTapCurrent: 0,
-    aboutData: {},
-    callData: {},
-    markers: []
+    menuTapCurrent: 0
   },
   regionchange(e) {
     // console.log(e.type)
