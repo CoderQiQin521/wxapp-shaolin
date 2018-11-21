@@ -1,8 +1,10 @@
 <!--components/common-card/common-card.wxml-->
-<navigator class="card" url="/pages/detail/detail">
+<view class="card">
   <view class="title">{{cardData.title}}</view>
   <view class="content">
-    {{cardData.content}}
+    {{cardData.marray}}
   </view>
-  <image src='{{cardData.thumbs}}' mode='widthFix' class='thumb'></image>
-</navigator>
+  <view class='thumb'>
+  <image src='{{cardData.image}}' mode='aspectFit'></image>
+  </view>  
+</view>

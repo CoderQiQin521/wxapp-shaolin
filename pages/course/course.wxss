@@ -2,7 +2,8 @@
   padding: 0 30rpx 30rpx;
 }
 
-.around_unit {
+.around_unit,
+.cards {
   padding: 0 30rpx;
 }
 

@@ -1,10 +1,11 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/detail/detail",
-    "pages/about/about",
-    "pages/course/course",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/course/course",         
+    "pages/rules/rules",
+    "pages/about/about",    
+    "pages/detail/detail"
   ],
   "tabBar": {
     "list": [

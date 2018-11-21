@@ -1,4 +1,4 @@
-// pages/product/product.js
+// pages/rules/rules.js
 var http = require('../../http/request')
 var api = require('../../config/api')
 
@@ -8,16 +8,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detailData: {},
-    id: ''
+    rulesData: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (options.type === "news") this.getData(options.id)
-    if (options.type === "cases") this.getCases(options.id)    
+    this.getData()
+  },
+  getData: function(e){
+    http.request(api.ApiRules).then(res => {
+      this.setData({
+        rulesData: res.msg
+      })
+    })
   },
 
   /**
@@ -60,22 +65,6 @@ Page({
    */
   onReachBottom: function () {
 
-  },
-  getData: function(id){
-    http.request(api.ApiNewsDetail + '?id=' + id).then(res => {
-      this.setData({
-        detail: res.msg
-      })
-      // console.log(res.msg)
-    })
-  },
-  getCases: function(id){
-    http.request(api.ApiCasesDetail + '?id=' + id).then(res => {
-      this.setData({
-        detail: res.msg
-      })
-      // console.log(res.msg)
-    })
   },
 
   /**

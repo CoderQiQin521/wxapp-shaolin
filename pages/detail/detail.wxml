@@ -1,11 +1,9 @@
 <view class='about_content'>
   <view class='about_title'>
-    {{about.title}}
+    {{detail.title}}
   </view>
   <view class='about_pic'>
-    <image src='{{about.pic}}' mode='widthFix'></image>
+    <image src='{{detail.image}}' mode='widthFix'></image>
   </view>
-  <view class='about_intro'>
-    {{about.intro}}
-  </view>
+  <rich-text class='about_intro' nodes='{{detail.content}}'></rich-text>
 </view>

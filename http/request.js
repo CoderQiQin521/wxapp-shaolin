@@ -10,7 +10,7 @@ const request = (url, data, method = 'GET') => {
           if (resData.error_code === 0) {
             resolve(resData.data)
           } else {
-            resolve(resData)
+            resolve(resData.data)
           }
         } else {
           reject(res)

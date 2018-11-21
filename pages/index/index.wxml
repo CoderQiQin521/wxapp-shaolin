@@ -1,14 +1,14 @@
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
-  <block wx:for="{{imgUrls}}" wx:key="">
+  <block wx:for="{{lb}}" wx:key="">
     <swiper-item>
-      <image src="{{item}}" class="slide-image" mode='widthFix' />
+      <image src="{{item.image}}" class="slide-image" mode='aspectFill' />
     </swiper-item>
   </block>
 </swiper>
 
 <view class='notice_box'>
   <view class='notice_unit about_intro'>
-    {{notice.content}}
+    {{notice.desc}}
   </view>
 </view>
 
@@ -16,58 +16,60 @@
   <common-title title="学校简介"></common-title>
   <view class='about_content'>
     <view class='about_pic'>
-      <image src='{{about.pic}}' mode='widthFix'></image>
+      <image src='{{about.image}}' mode='aspectFill'></image>
     </view>
     <view class='about_intro'>
-      {{about.intro}}
+      {{about.summary}}
     </view>
   </view>
   <view class='phone_box align_center'>
-    <phone-number numbers="13676910123" urls="/pages/about/about"></phone-number>
+    <phone-number numbers="{{phone.phone}}" urls="/pages/about/about"></phone-number>
   </view>
 </view>
 
 <view class='about_box bd_btm'>
   <common-title title="招生简章"></common-title>
   <view class='about_zhang'>
-    <image src='/image/jianzhang.jpg' mode='widthFix'></image>
+    <navigator url='/pages/rules/rules'>
+      <image src='{{rules.image}}' mode='widthFix'></image>
+    </navigator>
   </view>
   <view class='phone_box align_center'>
-    <phone-number numbers="13676910123" urls="/pages/detail/detail"></phone-number>
+    <phone-number numbers="{{phone.phone}}" urls="/pages/rules/rules"></phone-number>
   </view>
 </view>
 
 <view class='course_box bd_btm'>
   <common-title title="课程安排"></common-title>
-  <view class="cards" wx:for="{{courseData}}" wx:key="{{item.index}}">
-    <common-card cardData="{{item}}"></common-card>
+  <view class="cards" wx:for="{{course}}" wx:key="{{item.index}}">
+    <common-card cardData="{{item}}" bindtap='toDetail' data-id="{{item.id}}" data-type="cases"></common-card>
   </view>
   <view class='phone_box align_center'>
-    <phone-number numbers="13676910123" urls="/pages/course/course"></phone-number>
+    <phone-number numbers="{{phone.phone}}" urls="/pages/course/course"></phone-number>
   </view>
 </view>
 
 <view class='around_box bd_btm'>
   <common-title title="校园环境"></common-title>
   <view class='around_unit'>
-    <view class='around_cell' wx:for="{{caseData}}" wx:key="{{item.index}}">
+    <view class='around_cell' wx:for="{{school}}" wx:key="{{item.index}}">
       <case-card caseData="{{item}}" hasLow="{{false}}"></case-card>
     </view>
   </view>
   <view class='phone_box align_center'>
-    <phone-number numbers="13676910123" urls="/pages/news/news"></phone-number>
+    <phone-number numbers="{{phone.phone}}" urls="/pages/news/news"></phone-number>
   </view>
 </view>
 
 <view class='news_box bd_btm'>
   <common-title title="新闻中心"></common-title>
   <view class='news_unit'>
-    <view class='news_cell' wx:for="{{newsData}}" wx:key="{{item.index}}">
-      <news-card newsData="{{item}}"></news-card>
+    <view class='news_cell' wx:for="{{news}}" wx:key="{{item.index}}">
+      <news-card newsData="{{item}}" bindtap="toDetail" data-id="{{item.id}}" data-type="news"></news-card>
     </view>
   </view>
   <view class='phone_box align_center'>
-    <phone-number numbers="13676910123" urls="/pages/news/news"></phone-number>
+    <phone-number numbers="{{phone.phone}}" urls="/pages/news/news"></phone-number>
   </view>
 </view>
 
@@ -75,10 +77,10 @@
   <common-title title="马上报名"></common-title>
   <form bindsubmit='formSubmit'>
     <view class='sign_form'>
-      <input class='sign_ipt' type='text' placeholder='请输入姓名'></input>
+      <input bindinput='inputForm' data-type='username' class='sign_ipt' type='text' placeholder='请输入姓名' value='{{formInfo.username}}' />
     </view>
     <view class='sign_form'>
-      <input class='sign_ipt' type='number' maxlength='11' placeholder='请输入电话'></input>
+      <input bindinput='inputForm' data-type='phone' maxlength='11' class='sign_ipt' type='number' placeholder='请输入电话' value='{{formInfo.phone}}' />
     </view>
     <view class='sign_form'>
       <button form-type='submit' class='sign_btn'>提交</button>
@@ -86,15 +88,14 @@
   </form>
 
   <view class='foot_box'>
-    <view class='foot_cell'>学校地址：{{footData.adr}}</view>
-    <view class='foot_cell'>招生办公室电话：{{footData.tell}}</view>
-    <!-- <view class='foot_cell'>
+    <view class='foot_cell'>学校地址：{{footer.addr}}</view>
+    <view class='foot_cell'>招生办公室电话：{{footer.tel}}</view>
+    <view class='foot_cell'>
       <view class='foot_ewm'>
-        <image src='{{footData.ewm}}' mode="widthFix"></image>
+        <image src='{{footer.qrcode}}' mode="aspectFill"></image>
       </view>
-      官方二维码
-    </view> -->
-    <view class='foot_cell'>技术支持：{{footData.duo}}</view>
+    </view>
+    <view class='foot_cell'>技术支持：朵朵科技</view>
   </view>
 </view>
 

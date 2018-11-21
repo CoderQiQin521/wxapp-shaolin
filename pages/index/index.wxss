@@ -7,6 +7,11 @@ swiper {
   height: 320rpx;
 }
 
+swiper image {
+  height: 320rpx;
+  width: 100%;
+}
+
 .bd_btm {
   border-bottom: 30rpx solid #f6f6f6;
 }
@@ -20,6 +25,11 @@ swiper {
   height: 300rpx;
   margin-bottom: 30rpx;
   text-align: center;
+}
+
+.about_pic image {
+  width: 100%;
+  height: 300rpx;
 }
 
 .about_intro {
@@ -108,6 +118,12 @@ swiper {
 .foot_ewm {
   margin: 20rpx auto;
   width: 200rpx;
-  height: 200rpx;
+  height: 240rpx;
   overflow: hidden;
 }
+
+.foot_ewm image {
+  width: 200rpx;
+  height: 240rpx;
+}
+

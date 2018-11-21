@@ -49,3 +49,8 @@
   overflow: hidden;
   vertical-align: middle;
 }
+
+.thumb image {
+  width: 200rpx;
+  height: 136rpx;
+}

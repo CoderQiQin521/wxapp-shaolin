@@ -6,8 +6,18 @@
   overflow: hidden;
 }
 
+.connect .thumbs image {
+  height: 400rpx;
+  width: 100%;
+}
+
 .connect.low {
   height: 240rpx;
+}
+
+.connect.low .thumbs image {
+  height: 240rpx;
+  width: 100%;
 }
 
 .titles {
@@ -24,6 +34,5 @@
   color: #fff;
   background-color: rgba(0, 0, 0, .6)
 }
-
 
 

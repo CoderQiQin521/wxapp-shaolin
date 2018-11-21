@@ -4,33 +4,33 @@
 </view>
 <view class="tab1" hidden="{{menuTapCurrent!='0'}}">
   <view class='about_content'>
-    <view class='about_pic'>
+    <!-- <view class='about_pic'>
       <image src='{{about.pic}}' mode='widthFix'></image>
-    </view>
-    <view class='about_intro'>
-      {{about.intro}}
-    </view>
+    </view> -->
+    <rich-text class='about_intro' nodes='{{aboutData.content}}'>
+      
+    </rich-text>
   </view>
 </view>
 <view class="tab2" hidden="{{menuTapCurrent!='1'}}">
   <view class='map_container'>
-  <map id="map" longitude="112.961645" latitude="34.520218" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 200px;"></map>
+  <map id="map" longitude="{{callData.longs}}" latitude="{{callData.lats}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 200px;"></map>
   </view>
   <view class='infor_list'>
     <view class='infor_item'>
-      联系人：某某某
+      联系人：{{callData.username}}
     </view>
     <view class='infor_item'>
-      电话：13676910123
+      电话：{{callData.phone}}
     </view>
     <view class='infor_item'>
-      邮箱：xxxxxxxx@qq.com
+      邮箱：{{callData.email}}
     </view>
     <view class='infor_item'>
-      网址：http://www.xxxxxxxxx.com
+      网址：{{callData.url}}
     </view>
     <view class='infor_item'>
-      地址：河南省登封市嵩山少林武术学校
+      地址：{{callData.addr}}
     </view>
   </view>
 </view>

@@ -1,0 +1,4 @@
+/* pages/rules/rules.wxss */
+.rules {
+  padding: 30rpx;
+}

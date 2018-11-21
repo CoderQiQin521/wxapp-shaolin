@@ -27,18 +27,22 @@
   flex: 1;
   font-size: 28rpx;
   line-height: 52rpx;
-  text-align: justify;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  height: 156rpx;
 }
 
 .thumb {
-  display: block;
   overflow: hidden;
   height: 156rpx;
   width: 240rpx;
   margin-left: 30rpx; 
+}
+
+.thumb image {
+  width: 240rpx;
+  height: 156rpx;
 }

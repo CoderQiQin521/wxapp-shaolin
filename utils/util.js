@@ -24,7 +24,18 @@ const verifyPhone = phone => {
   return reg.test(phone)
 }
 
+const showToast = (msg='提示语',icon='success', cb) => {
+  wx.showToast({
+    title: msg,
+    icon: icon,
+    success: function() {
+      typeof cb === 'function' && cb()
+    } 
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
-  verifyPhone: verifyPhone
+  verifyPhone: verifyPhone,
+  showToast: showToast
 }

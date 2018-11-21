@@ -2,16 +2,16 @@
 <view class='news'>
   <view class='txt'>
     <view class='titles text_ellipsis'>
-      {{newsData.titles}}
+      {{newsData.title}}
     </view>
     <view class='intro text_ellipsis'>
-      {{newsData.intros}}
+      {{newsData.marray}}
     </view>
-    <navigator class='btn' url='{{newsData.urls}}' open-type='switchTab'>
-      {{newsData.more}}
-    </navigator>
+    <view class='btn' open-type='switchTab'>
+      查看更多+
+    </view>
   </view>
   <view class='thumb'>
-    <image src='{{newsData.srcs}}' mode='widthFix'></image>
+    <image src='{{newsData.image}}' mode='aspectFill'></image>
   </view>
 </view>
