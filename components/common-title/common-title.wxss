@@ -1,11 +1,5 @@
 /* components/common-title/common-title.wxss */
 .box {
-  /* position: relative;
-  line-height: 80rpx;
-  padding: 0 30rpx; */
-}
-
-.title {
   width: 100%;
   text-align: center;
   color: #fff;
