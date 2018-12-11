@@ -1,2 +1,38 @@
-<!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view class="menu_box">
+  <text class='menu1 {{menuTapCurrent=="0"?"borders":""}}' data-current="0" catchtap="menuTap">关于我们</text>
+  <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap">联系方式</text>
+</view>
+<view class="tab1" hidden="{{menuTapCurrent!='0'}}">
+  <view class='about_content'>
+    <!-- <view class='about_pic'>
+      <image src='{{about.pic}}' mode='widthFix'></image>
+    </view> -->
+    <rich-text class='about_intro' nodes='{{aboutData.content}}'>
+      
+    </rich-text>
+  </view>
+</view>
+<view class="tab2" hidden="{{menuTapCurrent!='1'}}">
+  <view class='map_container'>
+  <map id="map" longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" show-location="true" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 200px;"></map>
+  </view>
+  <view class='infor_list'>
+    <view class='infor_item'>
+      联系人：{{callData.username}}
+    </view>
+    <view class='infor_item'>
+      电话：{{callData.phone}}
+    </view>
+    <view class='infor_item'>
+      固定电话：{{footer.tel}}
+    </view>
+    <!-- <view class='infor_item'>
+      网址：{{callData.url}}
+    </view> -->
+    <view class='infor_item'>
+      地址：{{callData.addr}}<view class='info_map' bindtap='toMap'>点击查看地图</view>
+    </view>
+  </view>
+</view>
+
+<slide-icon></slide-icon>
