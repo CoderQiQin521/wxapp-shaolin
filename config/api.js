@@ -4,6 +4,7 @@ module.exports = {
   ApiIndex: ApiUrl + 'index/index',
   ApiCaseType: ApiUrl + 'index/cases_type',
   ApiRules: ApiUrl + 'index/rules',
+  ApiIntro: ApiUrl + 'index/about',
   ApiNewsType: ApiUrl + 'index/news_type',
   ApiSigUp: ApiUrl + 'index/sign_up',
   ApiCases: ApiUrl + 'index/cases',

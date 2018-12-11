@@ -9,3 +9,14 @@
   width: 80rpx;
   height: 200rpx;
 }
+
+.slide_node {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.slide_node:after {
+  border: none;
+}

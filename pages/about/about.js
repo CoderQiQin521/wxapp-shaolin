@@ -1,30 +1,26 @@
 // pages/about/about.js
 var http = require('../../http/request')
 var api = require('../../config/api')
-
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    menuTapCurrent: 0
+    footer: '',
+    menuTapCurrent: 0,
+    markers: [{
+      iconPath: "/image/location.png",
+      id: 0,
+      latitude: 0,
+      longitude: 0,
+      width: 50,
+      height: 50
+    }]
   },
   regionchange(e) {
     // console.log(e.type)
-  },
-  toMap: function(){
-    wx.getLocation({
-      success: function(res) {
-        const latitude = res.latitude
-        const longitude = res.longitude
-        wx.openLocation({
-          latitude,
-          longitude,
-          scale: 14
-        })
-      },
-    })
   },
 
   /**
@@ -32,6 +28,11 @@ Page({
    */
   onLoad: function(options) {
     this.getData()
+    if (app.globalData.title) {
+      wx.setNavigationBarTitle({
+        title: app.globalData.title
+      })
+    }
   },
 
   /**
@@ -52,6 +53,12 @@ Page({
     });
   },
   getData: function(e) {
+    http.request(api.ApiIndex).then(res => {
+      // console.log(res)
+      this.setData({
+        footer: res.msg.footer
+      })
+    })
     http.request(api.ApiAbout).then(res => {
       this.setData({
         aboutData: res.msg
@@ -69,6 +76,15 @@ Page({
           height: 30
         }]
       })
+    })
+  },
+
+  toMap: function (e) {
+    let latitude = parseFloat(this.data.markers[0].latitude)
+    let longitude = parseFloat(this.data.markers[0].longitude)
+    wx.openLocation({
+      latitude: latitude,
+      longitude: longitude
     })
   },
 

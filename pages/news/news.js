@@ -1,14 +1,14 @@
 // pages/news/news.js
 var http = require('../../http/request')
 var api = require('../../config/api')
-
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    menuTapCurrent: 5,
+    menuTapCurrent: 4,
     typeData: [],
     newsData: []
   },
@@ -19,6 +19,11 @@ Page({
   onLoad: function (options) {
     this.getData()
     this.getNews(this.data.menuTapCurrent)
+    if (app.globalData.title){
+      wx.setNavigationBarTitle({
+        title: app.globalData.title
+      })
+    }
   },
 
   menuTap: function (e) {

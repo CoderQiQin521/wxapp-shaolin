@@ -5,6 +5,11 @@ var util = require('../../utils/util')
 
 Page({
   data: {
+    formInfo: {
+      username: '',
+      phone: '',
+      age: ''
+    },
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
@@ -63,12 +68,13 @@ Page({
     //若全部都有值的话判断手机号格式
     if (isOk) {
       if (util.verifyPhone(parseInt(formData.phone))) {
-        http.request(api.ApiSigUp).then(res => {
+        http.request(api.ApiSigUp, formData, 'POST').then(res => {
           util.showToast(res.msg)
           this.setData({
             formInfo: {
-              username: '',
-              phone: ''
+              username: res.msg.username,
+              phone: res.msg.phone,
+              age: res.msg.age
             }
           })
           
@@ -101,6 +107,13 @@ Page({
       url: '/pages/detail/detail?id=' + id + '&type=' + types,
     })
     // console.log(types)
+  },
+  viewPic: function(e){
+    // console.log(this.data.footer.qrcode)
+    let qrcode = this.data.footer.qrcode
+    wx.previewImage({
+      urls: [qrcode],
+    })
   },
   onLoad: function() {
     this.getData()

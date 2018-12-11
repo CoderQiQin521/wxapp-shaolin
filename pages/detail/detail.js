@@ -1,7 +1,7 @@
 // pages/product/product.js
 var http = require('../../http/request')
 var api = require('../../config/api')
-
+var app = getApp()
 Page({
 
   /**
@@ -17,7 +17,12 @@ Page({
    */
   onLoad: function (options) {
     if (options.type === "news") this.getData(options.id)
-    if (options.type === "cases") this.getCases(options.id)    
+    if (options.type === "cases") this.getCases(options.id)  
+    if (app.globalData.title) {
+      wx.setNavigationBarTitle({
+        title: app.globalData.title
+      })
+    }  
   },
 
   /**
@@ -63,6 +68,7 @@ Page({
   },
   getData: function(id){
     http.request(api.ApiNewsDetail + '?id=' + id).then(res => {
+      res.msg.content = res.msg.content.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ')
       this.setData({
         detail: res.msg
       })
@@ -71,6 +77,7 @@ Page({
   },
   getCases: function(id){
     http.request(api.ApiCasesDetail + '?id=' + id).then(res => {
+      res.msg.content = res.msg.content.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ')
       this.setData({
         detail: res.msg
       })

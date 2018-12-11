@@ -1,0 +1,7 @@
+<!--pages/intro/intro.wxml-->
+<view class='about_content'>
+  <view class='about_pic'>
+    <image src='{{introData.image}}' mode='widthFix'></image>
+  </view>
+  <rich-text class='about_cont' nodes='{{introData.content}}'></rich-text>
+</view>

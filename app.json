@@ -4,7 +4,8 @@
     "pages/about/about",
     "pages/news/news",
     "pages/course/course",         
-    "pages/rules/rules",       
+    "pages/rules/rules",
+    "pages/intro/intro",
     "pages/detail/detail"
   ],
   "tabBar": {
@@ -25,7 +26,7 @@
         "pagePath": "pages/news/news",
         "iconPath": "image/icon-news.png",
         "selectedIconPath": "image/icon-news-active.png",
-        "text": "新闻中心"
+        "text": "家长问答"
       },
       {
         "pagePath": "pages/about/about",
@@ -39,7 +40,6 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#9f0a04",
-    "navigationBarTitleText": "德武功夫文化",
     "navigationBarTextStyle":"#fff"
   }
 }

@@ -14,7 +14,7 @@
 </view>
 <view class="tab2" hidden="{{menuTapCurrent!='1'}}">
   <view class='map_container'>
-  <map id="map" longitude="{{callData.longs}}" latitude="{{callData.lats}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" show-location="true" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 200px;"></map>
+  <map id="map" longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" show-location="true" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 200px;"></map>
   </view>
   <view class='infor_list'>
     <view class='infor_item'>
@@ -24,11 +24,11 @@
       电话：{{callData.phone}}
     </view>
     <view class='infor_item'>
-      邮箱：{{callData.email}}
+      固定电话：{{footer.tel}}
     </view>
-    <view class='infor_item'>
+    <!-- <view class='infor_item'>
       网址：{{callData.url}}
-    </view>
+    </view> -->
     <view class='infor_item'>
       地址：{{callData.addr}}<view class='info_map' bindtap='toMap'>点击查看地图</view>
     </view>

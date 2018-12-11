@@ -1,7 +1,7 @@
 // pages/course/course.js
 var http = require('../../http/request')
 var api = require('../../config/api')
-
+var app = getApp()
 Page({
 
   /**
@@ -19,6 +19,11 @@ Page({
   onLoad: function (options) {
     this.getData()
     this.getList(this.data.menuTapCurrent)
+    if (app.globalData.title) {
+      wx.setNavigationBarTitle({
+        title: app.globalData.title
+      })
+    }
   },
   menuTap: function (e) {
     var current = e.currentTarget.dataset.current;//获取到绑定的数据

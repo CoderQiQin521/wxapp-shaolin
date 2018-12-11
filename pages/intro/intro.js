@@ -1,4 +1,4 @@
-// pages/rules/rules.js
+// pages/intro/intro.js
 var http = require('../../http/request')
 var api = require('../../config/api')
 var app = getApp()
@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    rulesData: {}
+    introData: {}
   },
 
   /**
@@ -22,10 +22,13 @@ Page({
       })
     }
   },
-  getData: function(e){
-    http.request(api.ApiRules).then(res => {
+
+  getData: function (e) {
+    http.request(api.ApiIntro).then(res => {
+      res.msg.content = res.msg.content.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ')
+      // console.log(res.msg.content)
       this.setData({
-        rulesData: res.msg
+        introData: res.msg
       })
     })
   },
