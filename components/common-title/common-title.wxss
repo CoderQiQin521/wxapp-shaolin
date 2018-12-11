@@ -1,19 +1,11 @@
 /* components/common-title/common-title.wxss */
 .box {
-<<<<<<< HEAD
-  position: relative;
+  /* position: relative;
   line-height: 80rpx;
-  padding: 0 30rpx;
+  padding: 0 30rpx; */
 }
 
-.more {
-  position: absolute;
-  right: 30rpx;
-  top: 0;
-  font-size: 28rpx;
-  color: #999;
-}
-=======
+.title {
   width: 100%;
   text-align: center;
   color: #fff;
@@ -25,4 +17,3 @@
   border-bottom: 6rpx solid #b28850;
 }
 
->>>>>>> dev
