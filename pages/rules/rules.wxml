@@ -1,0 +1,5 @@
+<!--pages/rules/rules.wxml-->
+<view class='rules'>
+  <rich-text class='rules_cont' nodes='{{rulesData.content}}'>  
+  </rich-text>
+</view>

@@ -1,18 +1,36 @@
-// pages/contact/contact.js
+// pages/intro/intro.js
+var http = require('../../http/request')
+var api = require('../../config/api')
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    introData: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getData()
+    if (app.globalData.title) {
+      wx.setNavigationBarTitle({
+        title: app.globalData.title
+      })
+    }
+  },
 
+  getData: function (e) {
+    http.request(api.ApiIntro).then(res => {
+      res.msg.content = res.msg.content.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ')
+      // console.log(res.msg.content)
+      this.setData({
+        introData: res.msg
+      })
+    })
   },
 
   /**

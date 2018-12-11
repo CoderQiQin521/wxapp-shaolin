@@ -1,5 +1,10 @@
 {
   "usingComponents": {
-    "common-title": "/components/common-title/common-title"
+    "common-title": "/components/common-title/common-title",
+    "phone-number": "/components/phone-number/phone-number",
+    "common-card": "/components/common-card/common-card",
+    "case-card": "/components/case-card/case-card",
+    "news-card": "/components/news-card/news-card",
+    "slide-icon": "/components/slide-icon/slide-icon"
   }
 }

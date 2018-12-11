@@ -1,0 +1,10 @@
+<!--components/common-card/common-card.wxml-->
+<view class="card">
+  <view class="title">{{cardData.title}}</view>
+  <view class="content">
+    {{cardData.marray}}
+  </view>
+  <view class='thumb'>
+  <image src='{{cardData.image}}' mode='aspectFit'></image>
+  </view>  
+</view>

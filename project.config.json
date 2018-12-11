@@ -11,8 +11,8 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.0",
-	"appid": "wx4dc729fa566beaec",
+	"libVersion": "2.3.2",
+	"appid": "wx9d51a10a38440d15",
 	"projectname": "shaolin",
 	"debugOptions": {
 		"hidedInDevtools": []

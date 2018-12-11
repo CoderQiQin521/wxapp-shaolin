@@ -1,6 +1,0 @@
-<template name="commonTitle">
-  <view class='align_center'>
-    <view class='title_txt'>{{titles}}</view>
-    <view class='title_word'>{{word}}</view>
-  </view>
-</template>

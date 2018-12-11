@@ -1,0 +1,56 @@
+/* components/news-card/news-card.wxss */
+.news {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #efefef;
+}
+
+.txt {
+  flex: 1;
+  overflow: hidden;
+}
+
+.text_ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.titles {
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+
+.intro {
+  font-size: 26rpx;
+  line-height: 40rpx;
+  margin-top: 6rpx;
+  color: #999;
+}
+
+.btn {
+  font-size: 24rpx;
+  width: 160rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  margin-top: 8rpx;
+  color: #fff;
+  background: #b28850;
+  border-radius: 5px;
+}
+
+.thumb {
+  width: 200rpx;
+  height: 136rpx;
+  margin-left: 20rpx;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.thumb image {
+  width: 200rpx;
+  height: 136rpx;
+}

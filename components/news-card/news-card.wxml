@@ -1,0 +1,17 @@
+<!--components/news-card/news-card.wxml-->
+<view class='news'>
+  <view class='txt'>
+    <view class='titles text_ellipsis'>
+      {{newsData.title}}
+    </view>
+    <view class='intro text_ellipsis'>
+      {{newsData.marray}}
+    </view>
+    <view class='btn' open-type='switchTab'>
+      查看更多+
+    </view>
+  </view>
+  <view class='thumb'>
+    <image src='{{newsData.image}}' mode='aspectFill'></image>
+  </view>
+</view>

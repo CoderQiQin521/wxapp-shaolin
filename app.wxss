@@ -105,3 +105,24 @@ image {
 .border_btm {
   border-bottom: 20rpx solid #f7f7f7;
 }
+
+/* 选项卡样式 */
+.menu_box {
+  display: flex;
+  height: 80rpx;
+  border-bottom: 4rpx solid #f7f7f7;
+}
+
+.menu1, 
+.menu2,
+.menu3 {
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.borders {
+  border-bottom: 2rpx solid #9f0a04;
+  color: #9f0a04;
+}

@@ -1,12 +1,11 @@
-// components/common-title/common-title.js
+// components/common-card/common-card.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    title: {
-      type: String,
-      value: "我是标题"
+    cardData: {
+      type: Object
     }
   },
 

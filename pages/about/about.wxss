@@ -1,1 +1,35 @@
 /* pages/about/about.wxss */
+.about_content {
+  padding: 30rpx 30rpx 0;
+}
+
+.about_pic {
+  overflow: hidden;
+  height: 300rpx;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.about_intro {
+  text-align: justify;
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+
+.infor_list {
+  font-size: 28rpx;
+  color: #666;
+  padding: 0 30rpx;
+}
+
+.infor_item {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #efefef;
+}
+
+.info_map {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+}

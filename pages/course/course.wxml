@@ -1,2 +1,19 @@
-<!--pages/course/course.wxml-->
-<text>pages/course/course.wxml</text>
+<view class="menu_box">
+  <text wx:for='{{typeData}}' wx:key='{{item.ty_id}}' class='menu1 {{menuTapCurrent===item.ty_id?"borders":""}}' data-current="{{item.ty_id}}" catchtap="menuTap">{{item.ty_name}}</text>
+  <!-- <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap">开设课程</text> -->
+</view>
+<view class="tab1" hidden="{{menuTapCurrent!='3'}}">
+  <view class='around_unit'>
+    <view class='around_cell' wx:for="{{listData}}" wx:key="{{item.index}}">
+      <case-card caseData="{{item}}" bindtap='toDetail' data-id="{{item.id}}" data-type="cases"></case-card>
+    </view>
+  </view>
+</view>
+
+<view class="tab2" hidden="{{menuTapCurrent!='2'}}">
+  <view class="cards" wx:for="{{listData}}" wx:key="{{item.index}}">
+    <common-card cardData="{{item}}" bindtap='toDetail' data-id="{{item.id}}" data-type="cases"></common-card>
+  </view>
+</view>
+
+<slide-icon></slide-icon>

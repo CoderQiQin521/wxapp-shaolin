@@ -1,0 +1,9 @@
+<!--components/slide-icon/slide-icon.wxml-->
+<view class='slide'>
+  <view class='slide_tell slide_box' bindtap='toPhone'>
+    <image src='/image/icon-tell.png' mode='widthFix'></image>
+  </view>
+  <button class='slide_node slide_box' open-type='contact'>
+    <image src='/image/icon-node.png' mode='widthFix'></image>
+  </button>
+</view>

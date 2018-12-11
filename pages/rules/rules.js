@@ -1,18 +1,33 @@
-// pages/case/case.js
+// pages/rules/rules.js
+var http = require('../../http/request')
+var api = require('../../config/api')
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    rulesData: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData()
+    if (app.globalData.title) {
+      wx.setNavigationBarTitle({
+        title: app.globalData.title
+      })
+    }
+  },
+  getData: function(e){
+    http.request(api.ApiRules).then(res => {
+      this.setData({
+        rulesData: res.msg
+      })
+    })
   },
 
   /**

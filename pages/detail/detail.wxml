@@ -1,0 +1,9 @@
+<view class='about_content'>
+  <view class='about_title'>
+    {{detail.title}}
+  </view>
+  <view class='about_pic'>
+    <image src='{{detail.image}}' mode='widthFix'></image>
+  </view>
+  <rich-text class='about_intro' nodes='{{detail.content}}'></rich-text>
+</view>

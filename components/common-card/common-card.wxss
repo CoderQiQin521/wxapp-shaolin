@@ -1,0 +1,48 @@
+/* components/common-card/common-card.wxss */
+.card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 50rpx 30rpx 30rpx;
+  background-color: transparent;
+  margin-top: 48rpx;
+  border: 4rpx solid #E7E3E0;
+}
+
+.title {
+  position: absolute;
+  top: -30rpx;
+  left: 40rpx;
+  width: 200rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  background: #A17842;
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 156rpx;
+}
+
+.thumb {
+  overflow: hidden;
+  height: 156rpx;
+  width: 240rpx;
+  margin-left: 30rpx; 
+}
+
+.thumb image {
+  width: 240rpx;
+  height: 156rpx;
+}

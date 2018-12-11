@@ -2,8 +2,11 @@
   "pages":[
     "pages/index/index",
     "pages/about/about",
-    "pages/course/course",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/course/course",         
+    "pages/rules/rules",
+    "pages/intro/intro",
+    "pages/detail/detail"
   ],
   "tabBar": {
     "list": [
@@ -23,7 +26,7 @@
         "pagePath": "pages/news/news",
         "iconPath": "image/icon-news.png",
         "selectedIconPath": "image/icon-news-active.png",
-        "text": "新闻中心"
+        "text": "家长问答"
       },
       {
         "pagePath": "pages/about/about",
@@ -37,7 +40,6 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#9f0a04",
-    "navigationBarTitleText": "嵩山少林寺武术学校",
     "navigationBarTextStyle":"#fff"
   }
 }

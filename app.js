@@ -1,4 +1,7 @@
 //app.js
+var http = require('./http/request')
+var api = require('./config/api')
+
 App({
   onLaunch: function () {
     // 登录
@@ -7,6 +10,16 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+    http.request(api.ApiCall).then(res => {
+      // console.log(res.msg)
+      this.globalData.title = res.msg.name
+      wx.setNavigationBarTitle({
+        title: res.msg.name
+      })
+    })
+
+
     // 获取用户信息
     wx.getSetting({
       success: res => {

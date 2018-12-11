@@ -1,18 +1,65 @@
 // pages/news/news.js
+var http = require('../../http/request')
+var api = require('../../config/api')
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    menuTapCurrent: 4,
+    typeData: [],
+    newsData: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getData()
+    this.getNews(this.data.menuTapCurrent)
+    if (app.globalData.title){
+      wx.setNavigationBarTitle({
+        title: app.globalData.title
+      })
+    }
+  },
 
+  menuTap: function (e) {
+    var current = e.currentTarget.dataset.current//获取到绑定的数据
+    //改变menuTapCurrent的值为当前选中的menu所绑定的数据
+    if (this.data.menuTapCurrent == e.currentTarget.dataset.current) {
+      return
+    }
+    this.setData({
+      menuTapCurrent: current
+    });
+    this.getNews(current)
+  },
+  //获取新闻分类接口数据
+  getData: function () {
+    http.request(api.ApiNewsType).then(res => {
+      this.setData({
+        typeData: res.msg
+      })
+    })
+  },
+  //获取新闻列表接口数据
+  getNews: function (id) {
+    http.request(api.ApiNews + '?id=' + id).then(res => {
+      this.setData({
+        newsData: res.msg
+      })
+    })
+  },
+  //跳转新闻详情
+  toDetail: function(e){
+    var id = e.currentTarget.dataset.id,
+      types = e.currentTarget.dataset.type
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + id + '&type=' + types,
+    })
   },
 
   /**
